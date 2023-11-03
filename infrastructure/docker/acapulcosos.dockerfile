@@ -1,9 +1,19 @@
 FROM node:21-alpine as builder
 
-COPY ./ /app
 WORKDIR /app
 
+COPY ./package.json ./
+COPY ./package-lock.json ./
+
 RUN npm install
+
+COPY src/ src/
+COPY gatsby-browser.js ./
+COPY gatsby-config.ts ./
+COPY gatsby-node.js ./
+COPY postcss.config.js ./
+COPY tailwind.config.js ./
+COPY tsconfig.json ./
 
 ARG CONTENTFUL_ACCESS_TOKEN
 ARG CONTENTFUL_SPACEID
