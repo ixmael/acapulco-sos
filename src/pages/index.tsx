@@ -6,7 +6,6 @@ import HomeLink from "../components/HomeLink"
 import MissingList from "../components/MissingList"
 
 const MissingListPage: React.FC<PageProps> = ({ data }) => {
-
   return (
     <main className="md:container md:mx-auto">
       <HomeLink />
