@@ -27,7 +27,7 @@ const Row: React.FC<any> = (props: RowMissing) => {
     }
 
     let imagesViews = (null)
-    if (missing.foto.length > 0) {
+    if (missing.foto?.length > 0) {
         imagesViews = (
             <div>
                 <ul>
